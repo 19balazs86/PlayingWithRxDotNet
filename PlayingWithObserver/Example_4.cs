@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace PlayingWithObserver
 
       using (subject.Subscribe(new TemperatureReporter("Subject-Reporter #1")))
       using (subject.Subscribe(temp => Console.WriteLine($"Anonymous-Reporter says the temperature is: {temp}.")))
+      using (subject.Where(t => t.Temp < 0).Select(t => t.Temp).Subscribe(temp => Console.WriteLine($"Filtered-Reporter says the temperature is: {temp}.")))
       {
         for (int i = 0; i < 5; i++)
         {
