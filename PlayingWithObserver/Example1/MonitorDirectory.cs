@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reactive.Linq;
 
-namespace Example1.PlayingWithObserver
+namespace PlayingWithObserver.Example1
 {
   public class MonitorDirectory : IDisposable
   {
