@@ -5,11 +5,6 @@ using PlayingWithObserver.Example3;
 
 namespace PlayingWithObserver
 {
-  // Observer Design Pattern
-  // https://docs.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern
-
-  // Github: Reactive Extensions for .NET
-  // https://github.com/dotnet/reactive
   public class Program
   {
     public static void Main(string[] args)

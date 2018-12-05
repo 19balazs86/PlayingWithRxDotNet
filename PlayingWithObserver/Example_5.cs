@@ -43,7 +43,7 @@ namespace PlayingWithObserver
 
       await Task.Delay(_random.Next(100, 500), cancelToken);
 
-      if (_random.Next(1, 100) <= 70)
+      if (_random.NextDouble() <= 0.7)
         throw new FormatException("Just an exception");
 
       return "Ok";
