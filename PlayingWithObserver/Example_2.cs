@@ -12,12 +12,7 @@ namespace PlayingWithObserver
       // Every 3 seconds 
       IObservable<long> observable = Observable.Timer(new DateTimeOffset(), TimeSpan.FromSeconds(3));
 
-      Task task = observable.ForEachAsync(i =>
-      {
-        Console.WriteLine(i);
-      }, cancellationToken);
-
-      await task;
+      await observable.ForEachAsync(i => Console.WriteLine(i), cancellationToken);
     }
   }
 }

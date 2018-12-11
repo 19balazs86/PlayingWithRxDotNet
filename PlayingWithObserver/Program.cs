@@ -18,12 +18,12 @@ namespace PlayingWithObserver
       Example_5.DoItAsync(cts.Token);
 
       Console.WriteLine("Press any key to stop.");
-      Console.ReadKey();
+      Console.ReadKey(true);
 
       cts.Cancel();
 
       Console.WriteLine("Press any key to exit.");
-      Console.ReadKey();
+      Console.ReadKey(true);
     }
   }
 }
