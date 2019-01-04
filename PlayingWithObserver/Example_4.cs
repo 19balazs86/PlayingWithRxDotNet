@@ -24,12 +24,12 @@ namespace PlayingWithObserver
         for (int i = 0; i < 5; i++)
         {
           await Task.Delay(_random.Next(500, 2000), cancellationToken);
-          subject.OnNext(new Temperature { Temp = _random.Next(-10, 30), Date = DateTime.Now });
+          subject.OnNext(Temperature.GetRandom());
         }
       }
 
       // No reported temperature
-      subject.OnNext(new Temperature { Temp = _random.Next(-10, 30), Date = DateTime.Now });
+      subject.OnNext(Temperature.GetRandom());
     }
   }
 }

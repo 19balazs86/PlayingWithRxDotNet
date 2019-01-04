@@ -16,6 +16,7 @@ namespace PlayingWithObserver
       Example_3.DoItAsync(cts.Token);
       Example_4.DoItAsync(cts.Token);
       Example_5.DoItAsync(cts.Token);
+      Example_6.DoItAsync(cts.Token);
 
       Console.WriteLine("Press any key to stop.");
       Console.ReadKey(true);
