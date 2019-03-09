@@ -16,13 +16,14 @@ namespace PlayingWithObserver
       BufferBlock<Temperature> queue = new BufferBlock<Temperature>();
 
       IObservable<Temperature> observable = queue.AsObservable();
+      IObserver<Temperature> observer     = queue.AsObserver();
 
       using (observable.Subscribe(new TemperatureReporter("BufferBlock-Reporter")))
       {
         for (int i = 0; i < 5; i++)
         {
           await Task.Delay(_random.Next(500, 2000), cancelToken);
-          queue.Post(Temperature.GetRandom());
+          observer.OnNext(Temperature.GetRandom());
         }
       }
     }
