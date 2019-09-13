@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PlayingWithObserver.Example3
+namespace PlayingWithRxDotNet.Example3
 {
   public class Temperature
   {

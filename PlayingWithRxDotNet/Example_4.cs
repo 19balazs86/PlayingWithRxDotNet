@@ -3,9 +3,9 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Threading;
 using System.Threading.Tasks;
-using PlayingWithObserver.Example3;
+using PlayingWithRxDotNet.Example3;
 
-namespace PlayingWithObserver
+namespace PlayingWithRxDotNet
 {
   public class Example_4
   {

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PlayingWithObserver.Example3
+namespace PlayingWithRxDotNet.Example3
 {
   class Example_3
   {

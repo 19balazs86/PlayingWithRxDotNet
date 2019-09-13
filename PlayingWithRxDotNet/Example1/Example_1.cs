@@ -3,7 +3,7 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PlayingWithObserver.Example1
+namespace PlayingWithRxDotNet.Example1
 {
   public class Example_1
   {

@@ -1,4 +1,4 @@
-﻿namespace PlayingWithObserver.Example1
+﻿namespace PlayingWithRxDotNet.Example1
 {
   public class MonitorChangeState
   {

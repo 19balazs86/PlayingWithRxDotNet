@@ -2,9 +2,9 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
-using PlayingWithObserver.Example3;
+using PlayingWithRxDotNet.Example3;
 
-namespace PlayingWithObserver
+namespace PlayingWithRxDotNet
 {
   public class Example_6
   {

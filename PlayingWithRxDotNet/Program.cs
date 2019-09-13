@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
-using PlayingWithObserver.Example1;
-using PlayingWithObserver.Example3;
+using PlayingWithRxDotNet.Example1;
+using PlayingWithRxDotNet.Example3;
 
-namespace PlayingWithObserver
+namespace PlayingWithRxDotNet
 {
   public class Program
   {

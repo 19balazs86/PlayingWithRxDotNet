@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PlayingWithObserver.Example3
+namespace PlayingWithRxDotNet.Example3
 {
   public class TemperatureMonitor : IObservable<Temperature>
   {

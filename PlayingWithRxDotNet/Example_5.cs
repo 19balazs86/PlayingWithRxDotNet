@@ -4,7 +4,7 @@ using System.Reactive.Threading.Tasks;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PlayingWithObserver
+namespace PlayingWithRxDotNet
 {
   public class Example_5
   {
