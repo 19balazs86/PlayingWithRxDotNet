@@ -21,9 +21,11 @@ namespace PlayingWithRxDotNet.Example1
       }
     }
 
-    private static async Task processChangeStateAsync(MonitorChangeState state)
+    private static Task processChangeStateAsync(MonitorChangeState state)
     {
-      await Task.Run(() => Console.WriteLine(state));
+      Console.WriteLine(state);
+
+      return Task.CompletedTask;
     }
   }
 }

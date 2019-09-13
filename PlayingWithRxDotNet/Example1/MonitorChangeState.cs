@@ -5,9 +5,6 @@
     public string ChangeType { get; set; }
     public string FileName { get; set; }
 
-    public override string ToString()
-    {
-      return $"{ChangeType}: {FileName}";
-    }
+    public override string ToString() => $"{ChangeType}: {FileName}";
   }
 }

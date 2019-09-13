@@ -8,7 +8,7 @@ namespace PlayingWithRxDotNet
 {
   public class Example_6
   {
-    private static Random _random = new Random();
+    private static readonly Random _random = new Random();
 
     public static async Task DoItAsync(CancellationToken cancelToken)
     {

@@ -28,7 +28,7 @@ namespace PlayingWithRxDotNet.Example1
           // Event handler conversion
           conversionAction =>
           {
-            FileSystemEventHandler eHandler = (sender, e) => { conversionAction(e); };
+            void eHandler(object sender, FileSystemEventArgs e) => conversionAction(e);
 
             return eHandler;
           },

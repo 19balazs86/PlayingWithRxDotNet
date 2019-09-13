@@ -9,19 +9,20 @@ namespace PlayingWithRxDotNet
   {
     public static void Main(string[] args)
     {
-      CancellationTokenSource cts = new CancellationTokenSource();
+      using (var cts = new CancellationTokenSource())
+      {
+        _ = Example_1.DoItAsync(cts.Token);
+        //_ = Example_2.DoItAsync(cts.Token);
+        //_ = Example_3.DoItAsync(cts.Token);
+        //_ = Example_4.DoItAsync(cts.Token);
+        //_ = Example_5.DoItAsync(cts.Token);
+        //_ = Example_6.DoItAsync(cts.Token);
 
-      Example_1.DoItAsync(cts.Token);
-      Example_2.DoItAsync(cts.Token);
-      Example_3.DoItAsync(cts.Token);
-      Example_4.DoItAsync(cts.Token);
-      Example_5.DoItAsync(cts.Token);
-      Example_6.DoItAsync(cts.Token);
+        Console.WriteLine("Press any key to stop.");
+        Console.ReadKey(true);
 
-      Console.WriteLine("Press any key to stop.");
-      Console.ReadKey(true);
-
-      cts.Cancel();
+        cts.Cancel();
+      }
 
       Console.WriteLine("Press any key to exit.");
       Console.ReadKey(true);

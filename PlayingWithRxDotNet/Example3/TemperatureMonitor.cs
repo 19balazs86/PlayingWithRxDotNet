@@ -48,11 +48,7 @@ namespace PlayingWithRxDotNet.Example3
         _observer  = observer;
       }
 
-      public void Dispose()
-      {
-        if (_observer != null)
-          _observers.Remove(_observer);
-      }
+      public void Dispose() => _observers?.Remove(_observer);
     }
   }
 }

@@ -9,7 +9,7 @@ namespace PlayingWithRxDotNet
   {
     public static async Task DoItAsync(CancellationToken cancellationToken)
     {
-      // Every 3 seconds 
+      // Every 3 seconds
       IObservable<long> observable = Observable.Timer(new DateTimeOffset(), TimeSpan.FromSeconds(3));
 
       await observable.ForEachAsync(i => Console.WriteLine(i), cancellationToken);

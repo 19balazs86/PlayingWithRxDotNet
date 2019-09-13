@@ -10,7 +10,7 @@ namespace PlayingWithRxDotNet
   {
     private static int _retryCounter = 0;
 
-    private static Random _random = new Random();
+    private static readonly Random _random = new Random();
 
     public static async Task DoItAsync(CancellationToken cancelToken)
     {

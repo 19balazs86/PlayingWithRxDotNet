@@ -6,8 +6,7 @@ namespace PlayingWithRxDotNet.Example3
   {
     public string Name { get; private set; }
 
-    private IDisposable _unsubscriber;
-    private Temperature _temperature;
+    private readonly IDisposable _unsubscriber;
 
     public TemperatureReporter(IObservable<Temperature> provider, string name)
     {
@@ -16,15 +15,10 @@ namespace PlayingWithRxDotNet.Example3
       _unsubscriber = provider.Subscribe(this);
     }
 
-    public TemperatureReporter(string name)
-    {
-      Name = name;
-    }
+    public TemperatureReporter(string name) => Name = name;
 
     public void OnNext(Temperature temperature)
     {
-      _temperature = temperature;
-
       Console.WriteLine($"{Name} says the temperature is: {temperature}.");
     }
 
