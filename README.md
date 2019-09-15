@@ -6,6 +6,8 @@ This small application contains some examples for the [Observer Design Pattern i
 
 - YouTube presentation: Using Redux pattern with ASP.NET Core + SignalR: [Link](https://www.youtube.com/watch?v=jE65d8b3w_M) | [GitHub - RxDemo](https://github.com/brendan-ssw/rxdemo).
 - Book: [Rx.NET in Action](https://www.manning.com/books/rx-dot-net-in-action).
+- [Testable timers with Reactive Extensions for .Net](https://mallibone.com/post/testable-timers-with-reactive-extensions).
+- GitHub issue: [Async / Await with IObserver](https://github.com/dotnet/reactive/issues/459).
 
 #### TPL Dataflow
 - Using BufferBlock ([System.Threading.Tasks.Dataflow](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.dataflow?view=netcore-2.2)) in the [example #6](https://github.com/19balazs86/PlayingWithObserver/blob/master/PlayingWithRxDotNet/Example_6.cs).

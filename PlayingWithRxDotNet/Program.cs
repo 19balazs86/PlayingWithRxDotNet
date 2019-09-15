@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using PlayingWithRxDotNet.Example1;
+using PlayingWithRxDotNet.Example2;
 using PlayingWithRxDotNet.Example3;
 
 namespace PlayingWithRxDotNet
@@ -12,7 +13,7 @@ namespace PlayingWithRxDotNet
       using (var cts = new CancellationTokenSource())
       {
         _ = Example_1.DoItAsync(cts.Token);
-        _ = Example_2.DoItAsync(cts.Token);
+        _ = Example_2.Create(DemoHealthCheck.Create(), cts.Token);
         _ = Example_3.DoItAsync(cts.Token);
         _ = Example_4.DoItAsync(cts.Token);
         _ = Example_5.DoItAsync(cts.Token);
