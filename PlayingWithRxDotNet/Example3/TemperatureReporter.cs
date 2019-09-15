@@ -25,7 +25,7 @@ namespace PlayingWithRxDotNet.Example3
     public void OnCompleted()
     {
       Console.WriteLine($"{Name} is completed.");
-      _unsubscriber.Dispose();
+      _unsubscriber?.Dispose();
     }
 
     public void OnError(Exception error)

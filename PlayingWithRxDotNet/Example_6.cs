@@ -22,8 +22,15 @@ namespace PlayingWithRxDotNet
       {
         for (int i = 0; i < 5; i++)
         {
-          await Task.Delay(_random.Next(500, 2000), cancelToken);
-          observer.OnNext(Temperature.GetRandom());
+          try
+          {
+            await Task.Delay(_random.Next(500, 2000), cancelToken);
+            observer.OnNext(Temperature.GetRandom());
+          }
+          catch (OperationCanceledException)
+          {
+            break;
+          }
         }
       }
     }

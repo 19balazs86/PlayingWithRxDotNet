@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PlayingWithRxDotNet
 {
-  public class Example_2
+  public static class Example_2
   {
     public static async Task DoItAsync(CancellationToken cancellationToken)
     {

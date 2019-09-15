@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace PlayingWithRxDotNet.Example3
 {
-  class Example_3
+  public static class Example_3
   {
-    private static Random _random = new Random();
+    private static readonly Random _random = new Random();
 
     public static async Task DoItAsync(CancellationToken cancellationToken)
     {
@@ -17,8 +17,15 @@ namespace PlayingWithRxDotNet.Example3
 
       for (int i = 0; i < 5; i++)
       {
-        await Task.Delay(_random.Next(500, 2000), cancellationToken);
-        provider.ChangeTemp(_random.Next(-10, 30));
+        try
+        {
+          await Task.Delay(_random.Next(500, 2000), cancellationToken);
+          provider.ChangeTemp(_random.Next(-10, 30));
+        }
+        catch (OperationCanceledException)
+        {
+          break;
+        }
       }
 
       provider.Completed();

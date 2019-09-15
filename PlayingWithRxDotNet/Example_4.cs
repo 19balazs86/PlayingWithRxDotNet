@@ -7,7 +7,7 @@ using PlayingWithRxDotNet.Example3;
 
 namespace PlayingWithRxDotNet
 {
-  public class Example_4
+  public static class Example_4
   {
     private static readonly Random _random = new Random();
 
@@ -23,8 +23,15 @@ namespace PlayingWithRxDotNet
       {
         for (int i = 0; i < 5; i++)
         {
-          await Task.Delay(_random.Next(500, 2000), cancellationToken);
-          subject.OnNext(Temperature.GetRandom());
+          try
+          {
+            await Task.Delay(_random.Next(500, 2000), cancellationToken);
+            subject.OnNext(Temperature.GetRandom());
+          }
+          catch (OperationCanceledException)
+          {
+            break;
+          }
         }
       }
 
