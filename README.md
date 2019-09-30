@@ -8,6 +8,7 @@ This small application contains some examples for the [Observer Design Pattern i
 - Book: [Rx.NET in Action](https://www.manning.com/books/rx-dot-net-in-action).
 - [Testable timers with Reactive Extensions for .Net](https://mallibone.com/post/testable-timers-with-reactive-extensions).
 - GitHub issue: [Async / Await with IObserver](https://github.com/dotnet/reactive/issues/459).
+- Explore all RxJS operators: [Launchpad for RxJS](https://reactive.how/rxjs).
 
 #### TPL Dataflow
 - Using BufferBlock ([System.Threading.Tasks.Dataflow](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.dataflow?view=netcore-2.2)) in the [example #6](https://github.com/19balazs86/PlayingWithObserver/blob/master/PlayingWithRxDotNet/Example_6.cs).
