@@ -1,32 +1,31 @@
-﻿using System;
-using System.Threading;
-using PlayingWithRxDotNet.Example1;
+﻿using PlayingWithRxDotNet.Example1;
 using PlayingWithRxDotNet.Example2;
 using PlayingWithRxDotNet.Example3;
 
 namespace PlayingWithRxDotNet
 {
-  public class Program
-  {
-    public static void Main(string[] args)
+    public class Program
     {
-      using (var cts = new CancellationTokenSource())
-      {
-        _ = Example_1.DoItAsync(cts.Token);
-        _ = Example_2.Create(DemoHealthCheck.Create(), cts.Token);
-        _ = Example_3.DoItAsync(cts.Token);
-        _ = Example_4.DoItAsync(cts.Token);
-        _ = Example_5.DoItAsync(cts.Token);
-        _ = Example_6.DoItAsync(cts.Token);
+        public static void Main(string[] args)
+        {
+            using (var cts = new CancellationTokenSource())
+            {
+                _ = Example_1.DoItAsync(cts.Token);
+                _ = Example_2.Create(DemoHealthCheck.Create(), cts.Token);
+                _ = Example_3.DoItAsync(cts.Token);
+                _ = Example_4.DoItAsync(cts.Token);
+                _ = Example_5.DoItAsync(cts.Token);
+                _ = Example_6.DoItAsync(cts.Token);
+                _ = Example_7.DoItAsync(cts.Token);
 
-        Console.WriteLine("Press any key to stop.");
-        Console.ReadKey(true);
+                Console.WriteLine("Press any key to stop.");
+                Console.ReadKey(true);
 
-        cts.Cancel();
-      }
+                cts.Cancel();
+            }
 
-      Console.WriteLine("Press any key to exit.");
-      Console.ReadKey(true);
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey(true);
+        }
     }
-  }
 }
